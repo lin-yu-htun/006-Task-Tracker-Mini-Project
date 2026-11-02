@@ -1,0 +1,86 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  margin-bottom: 0.85rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+
+.checkbox {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #2563eb; /* Brand Blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+
+.todo-text {
+  font-size: 1.05rem;
+  color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+
+/* Green Marked Completed State */
+.todo-item.completed .checkbox {
+  background: #22c55e; /* Green check fill */
+  border-color: #22c55e;
+}
+
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  text-decoration-color: #22c55e; /* Green line */
+  color: #22c55e; /* Green text highlight */
+  opacity: 0.85;
+}
+
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: rgba(249, 250, 251, 0.4);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+}
+
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
